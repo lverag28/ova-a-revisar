@@ -1,0 +1,13 @@
+.box_examples, .box_required_link { width: 730px; }
+
+.fraction {  display: inline-block;  vertical-align: middle;   margin: 0 0.2em 0.4ex;  text-align: center; }
+.fraction > span { display: block;  padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+
+.radical {  position: relative;   font-size: 1.6em;   vertical-align: middle; }
+.n-root {   position: absolute;   top: -0.333em;  left: 0.333em;  font-size: 45%; }
+.radicand {  padding: 0.25em 0.25em;  border-top: thin black solid; }
+
+#actividad2 .jpit_activities_quiz_board p {text-align: center; font-weight: bold; font-style: italic  }

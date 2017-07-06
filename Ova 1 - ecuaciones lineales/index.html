@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Curso: Álgebra y trigonometría</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_memory.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_droppable.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_viewfirst.css" rel="stylesheet" type="text/css">
+    
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--Other components -->
+    <script src="components/twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="components/twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="components/twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
+<!--End Other components -->
+
+    
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/guessing/jpit_activity_guessing.js"></script>
+    <script src="components/pit/activity/memory/jpit_activity_memory.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
+    <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+    <script src="components/pit/activity/sortable/jpit_activity_sortable.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+    <script src="components/pit/resources/movi/jpit_resource_movi.js"></script>
+    <script src="components/pit/resources/zoom/jpit_resource_zoom.js"></script>
+    <script src="components/maphilight/jquery.maphilight.min.js"> </script>
+    <script src="js/init.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+    
+    <style>
+        body {
+            /*background: #4b718d url(img/bg_repeat.png) repeat;*/
+        }
+
+        body.loading:after {
+            content: url(img/ajax-loader.gif);
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+    
+</head>
+<body class="loading">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;">Este documento se encuentra en modo de solo lectura por lo que la información de lo que realice no se guardará. Si precisa almacenar el seguimiento, por favor cierre esta página e intente más tarde.</div>
+
+        <header maintitle="Curso: Álgebra y trigonometría" subtitle="Ecuaciones lineales con una incógnita y aplicaciones">
+            <div id="div_overlay" ></div>
+            <div id="header_left"></div>
+            <div id="header_right"></div>
+            <div id="main_menu">
+                <menu>
+                    <item title="Contextualización" data-page="context"></item>
+               
+                    <item title="Contenido">
+                        <item title="1. Definición de ecuaciones lineales con una incógnita " data-page="definicion_0"></item>
+                        <item title="2. Solución de una ecuación lineal" data-page="solucion_0"></item>
+                        <item title="3. Aplicaciones de ecuaciones lineales con una incógnita" data-page="aplicaciones_0"></item>
+                    </item>
+           
+                </menu>  
+                <globals>
+                    <item data-id="credits" title="Créditos"><i class="ion-android-checkbox-blank"><span>C</span></i></item>
+                    <item data-id="bibliography" title="Bibliografía"><i class="ion-ios-book"></i></item>
+                    <item data-id="results" title="Resultados"><i class="ion-thermometer w_content_controler" data-content="#results_page"></i></item>
+                    <item data-id="return" title="Regresar"><i class="ion-share"></i></item>
+                </globals>
+            </div>
+        </header>
+
+        <div id="main" class="main_content">
+            <div id="middle" style="display: none;">
+
+                <!--Contextualización -->
+                <div class="page">
+                    <div class="subpage" id="context_1">
+                    </div>
+                    
+                    <div class="subpage" id="context_0">
+                        <div class="box_l img_responsive center"><img src="img/avata-welcome.png" /></div>
+                        <div class="box_r">
+                            <h2>Contextualización</h2>
+                            <h3>Introducción</h3>
+                            <p>Los problemas que involucran ecuaciones lineales vienen desde los orígenes de las matemáticas. En este módulo usted aprenderá a reconocer las ecuaciones lineales con una incógnita y a solucionarlas apoyándose en las propiedades para resolver ecuaciones,  al final encontrará problemas prácticos en los que se deben utilizar ecuaciones lineales con una incógnita.</p>
+                            <div class="box_stressed">
+                                <h5>Recuerde que: </h5>
+                                <p>Una ecuación es un enunciado o proposición, que plantea la igualdad de dos expresiones; donde al menos una de ellas contiene cantidades desconocidas llamadas variables o incógnitas.</p>
+                            </div>
+                            <h3>Objetivo</h3>
+                            <p>Reconocer las ecuaciones lineales con una incógnita y solucionarlas con base en las propiedades de resolución de ecuaciones para aplicarlas en problemas prácticos.</p>
+                            <h3>Duración</h3>
+                            <p></p>
+                            <h3>Contenido</h3>
+                            <ol class="ol_counter">
+                                <li><a href="javascript:;" class="open_page button" page="definicion_0">Definición de ecuaciones lineales con una incógnita </a></li>
+                                <li><a href="javascript:;" class="open_page button" page="solucion_0">Solución de una ecuación lineal</a></li>
+                                <li><a href="javascript:;" class="open_page button" page="aplicaciones_0">Aplicaciones de ecuaciones lineales con una incógnitas</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!--1. Definición de ecuaciones lineales con una incógnita  -->
+                <div class="page">
+                    <div class="subpage" id="definicion_0">
+                        <h2>1. Definición de ecuaciones lineales con una incógnita </h2>
+                        <p>Se llaman lineales o de primer grado, porque el exponente máximo de la variable es uno, es decir, el grado de la ecuación es uno.</p>
+                        <p>Con base en esta consideración, una ecuación de una variable es del tipo  ax + b = 0, siendo a,b &#8712;R; a &#8800; 0.  Su única solución, si la hay, es x = -  <span class="fraction"><span class="fup">a</span>
+                        <span class="bar">/</span><span class="fdn">b</span></span> </p>
+                       
+                        <p>Observe que para resolver una ecuación lineal de una variable se trasponen, si es necesario, todos los términos que contienen la incógnita o variable a un miembro de la ecuación y, todos los demás términos al otro miembro de la ecuación.</p>
+                        <div class="box_connection">
+                            <p>Son ejemplos de ecuaciones lineales los siguientes:</p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplos:</h5>
+                            <p><strong>Ejemplo 1</strong></p>
+                            <p>8x + 5x - 3x = 17 - 9 + 32</p>
+                            <p><strong>Ejemplo 2</strong></p>
+                            <p>4(x + 5)&sup2;-(2x + 1)&sup2; = 3(x-5) + 180</p>
+                            <p>En apariencia, esta ecuación no es lineal, pero si usted efectúa las operaciones planteadas se reduce la ecuación a esta condición. ¿Cómo?</p>
+                            <p><strong>Ejemplo 3</strong></p>
+                            <p><span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">8</span></span>p + <span class="fraction"><span class="fup">1</span>   <span class="bar">/</span><span class="fdn">6</span></span>p - p = <span class="fraction"><span class="fup">5</span> <span class="bar">/</span><span class="fdn">6</span></span> - <span class="fraction"><span class="fup">1</span> <span class="bar">/</span><span class="fdn">2</span></span> p,  es una ecuación lineal cuya variable o incógnita es <em>p</em></p>
+                            <p>Puede probarse además, que esta ecuación tiene máximo n raíces o soluciones que satisfacen la ecuación.</p>
+                        </div>
+                        <div class="box_connection">
+                            <p>Antes de continuar le recomendamos resolver la siguiente actividad de aprendizaje.</p>
+                        </div>
+                        
+                        <div id="actividades_check">
+                            <h2>Actividad de aprendizaje No. 1</h2>
+                            <p><strong>Objetivo : </strong>identificar las ecuaciones lineales con una incógnita.</p>
+                            <p><strong>Enunciado: </strong>indique para las siguientes ecuaciones, cuáles son lineales con una incógnita (haciendo clic en <img src="content/actb.png"/> ) y cuáles no (Haciendo clic en <img src="content/actm.png"/>).</p>
+
+                            <div id="act_check_words" class="pit-activities-check" data-act-title="Actividad de aprendizaje No. 1" data-act-id="check-activity">
+                                <words>
+                                    <li>4x + 8y – 3 = 0</li>
+                                    <li>3x&#178; + 2x + 1 = 0</li>
+                                    <li data-val="true">3x - 2x + [-1 +x -3x] = 7x + 6</li>
+                                </words>
+                                <div class="board">
+                                    <div class="check_left">
+                                        <div class="play">
+                                            <div class="word_content box_panel_activity">&nbsp;</div>
+                                            <div class="botones_actividad">
+                                                <i class="correct ion-checkmark-circled button"></i><i class="incorrect ion-close-circled button"></i>
+                                            </div>
+                                        </div>
+                                        <div class="box_conclution box_panel_activity" style="display: none;">
+                                            <h2>¡Ha finalizado!</h2>
+                                            <p>
+                                                <span class="subtitle2">Aciertos:</span>
+                                                <span class="correct_words"></span>
+                                            </p>
+                                            <p>
+                                                <span class="subtitle2">Desaciertos:</span>
+                                                <span class="wrong_words"></span>
+                                            </p>
+                                            <p>Si usted ha obtenido más desaciertos que aciertos, le recomendamos que estudie nuevamente los contenidos.</p>
+                                            <div class="box_reintentar">
+                                                <button class="button general reload">Reintentar</button>
+                                                <p>
+                                                    Haga clic en el botón Reintentar para responder a las palabras no acertadas.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="check_right">
+                                        <div class="box_result">
+                                            <div class="marco hits">
+                                                <div class="value">0</div>
+                                                <div class="text">Aciertos</div>
+                                            </div>
+                                            <div class="marco miss">
+                                                <div class="value">0</div>
+                                                <div class="text">Errores</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--2. Solución de una ecuación lineal -->
+                <div class="page">
+                    <div class="subpage" id="solucion_0">
+                        <h2>2. Solución de una ecuación lineal</h2>
+                        <div class="box_connection">
+                            <p>A continuación, con los siguientes ejemplos aprenderá a solucionar correctamente una ecuación lineal.</p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 1</h5>
+                            <p>2x + 3 - (4x - 1) = 2 - x</p>
+                            <p><strong>Solución:</strong></p>
+                            <p>2x + 3- (4x - 1) = 2 - x</p>
+                            <p>Para este ejemplo, aplique el siguiente procedimiento:</p>
+                            <p>Organice la ecuación destruyendo los paréntesis, tenga en cuenta que antes de este paréntesis hay un signo negativo. <strong>2x + 3 - 4x + 4 = 2 - x</strong></p>
+                            <p>De izquierda a derecha ubique todas las incógnitas, luego ponga el signo igual y ubique los valores sin incógnitas. <strong>2x - 4x + x = 2 - 4</strong></p>
+                            <p>Realice las operaciones matemáticas requeridas. <strong>-x = -2</strong></p>
+                            <p>Al multiplicar ambos miembros de la ecuación por -1, se obtiene la solución. <strong>x = 2</strong></p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 2</h5>
+                            <p>3(x - 5) + 180 +(2x + 1)&#178; = 4(x + 5)&#178;</p>
+                            <p><strong>Solución:</strong></p>
+                            <p>3(x - 5) + 180 + (2x+1)&#178; =4(x + 5)&#178;, es una ecuación que puede transformarse si usted hace las operaciones indicadas, de la siguiente manera,</p>
+                            <p><strong>3x - 15 + 180 + 4x&#178; + 4x + 1 = 4x&#178; + 40x + 100</strong></p>
+                            <p>Los términos elevados al cuadrado se anulan y la ecuación se vuelve lineal, así.</p>
+                            <p><strong>3x + 4x - 40x = 100 + 15 - 180 - 1</strong></p>
+                            <p><strong>-33x = -66</strong> finalmente, <strong>x = 2</strong></p>
+                        </div>
+                        <div class="box_required_link">
+                            <h5>Extendiendo el Saber...</h5>
+                            <p><strong>Recurso: </strong><img src="img/img_video.png"/><a href="http://www.youtube.com/watch?v=JN9DDmuEwKg&feature=related " target="_blank">Ecuaciones con productos notables </a></p>
+                            <p><strong>Duración: </strong>1:50 (un minuto y cincuenta segundos).</p>
+                            <p><strong>Actividad significativa: </strong>en este video aprenderá a resolver ecuaciones con productos notables con el ejemplo (x + 3)&#178; + 5 = (x - 5)&#178;</p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 3</h5>
+                            <p>0.5x - 0.3x = 0.25x - 1</p>
+                            <p><strong>Solución: </strong></p>
+                            <p>Para no operar con decimales, se amplifica o multiplica la ecuación por 100. Este proceso hace más fácil los cálculos y vuelve los coeficientes de los términos de la ecuación, números enteros.  Ahora puede darse cuenta que la ecuación planteada puede escribirse como:</p>
+                            <p><strong>50x - 30x = 25x - 100</strong>, luego,<strong>-5x = -100</strong>, entonces, <strong> x = 20</strong></p>
+                        </div>
+                        <div class="box_connection">
+                            <p>Antes de continuar le recomendamos resolver la siguiente actividad de aprendizaje.</p>
+                        </div>
+                        <div id="actividad2">
+                            <h2>Actividad de aprendizaje No. 2</h2>
+                            <p><strong>Objetivo: </strong>identificar las soluciones de diferentes ecuaciones.</p>
+                            <p><strong>Enunciado: </strong>resuelva las siguientes ecuaciones, seleccionando la respuesta correcta para cada una, según las opciones disponibles. Tenga presente que debe verificar que las soluciones sí satisfagan la ecuación respectiva.</p>
+                            <div class="pit-activities-quiz" data-act-title="Actividad de aprendizaje No. 2" data-act-id="quiz-activity2" data-intro="false">
+                                <presentation><p></p></presentation>
+                                <question type="simplechoice">
+                                    <description><p>3x - 8x + [-5x - (x + 3)] = -5x - 9</p></description>
+                                    <ul>
+                                        <li data-response="true">x = 1</li>
+                                        <li>x = 2</li>
+                                        <li>x = 3</li>
+                                        <li>x = 4</li>
+                                    </ul>
+                                    <!--
+                                    <button class="w_content_controler button general see_more" data-content="#textos_modal_window">Compare la solución...</button>
+                                    <div id="textos_modal_window" class="w_content">
+                                        <p><strong>Compare la solución y la verificación con el procedimiento realizado por usted.</strong> </p>
+                                        <p><strong>Solución: </strong></p>
+                                        <p>3x - 8x + [-5x - (x+3)] = -5x -9 &rArr; 3x - 8x - 5x - x - 3 = -5x -9</p>
+                                        <p>⇒ 3x - 8x - 5x - x + 5x = -9 + 3 &rArr; -6x = -6 &rArr; x= (-6)/(-6)⇒ <span style="color: red;">x = 1</span> </p>
+                                        <p>Verificación</p>
+                                        <p>3(1)-8(1)+[-5(1)-(1+3)] = 3 - 8 + (-5 -4) = -5 -9 = -14</p>
+                                        <p>-5(1)-9 = -5 -9 = -14</p>
+                                    </div>
+                                    -->
+                                </question>
+                                            
+                                <question type="simplechoice">
+                                    <description><p><span class="fraction"><span class="fup">5</span><span class="bar">/</span><span class="fdn">6</span></span>x + 0.25x - 0.3x = x - 3</p></description>
+                                    <ul>
+                                        <li data-response="true">x = 180/13</li>
+                                        <li>&#126;x = 180/130</li>
+                                        <li>&#126;x = 130 </li>
+                                        <li>x = 180</li>
+                                    </ul>
+                                <!--<button class="w_content_controler button general see_more" data-content="#textos_modal_window2">Compare la solución...</button>
+                                    <div id="textos_modal_window2" class="w_content">
+                                        <p><strong>Compare la solución y la verificación con el procedimiento realizado por usted.</strong> </p>
+                                        <p><strong>Solución: </strong></p>
+                                        <p><span class="fraction"><span class="fup">5</span><span class="bar">/</span><span class="fdn">6</span></span>x + <span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">4</span></span>x - <span class="fraction"><span class="fup">3</span><span class="bar">/</span><span class="fdn">10</span></span>x = x - 3 &rArr; <span class="fraction"><span class="fup">5</span><span class="bar">/</span><span class="fdn">6</span></span>x + <span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">4</span></span>x - <span class="fraction"><span class="fup">3</span><span class="bar">/</span><span class="fdn">10</span></span>x - x = -3</p>
+                                        <p>&rArr; -<span class="fraction"><span class="fup">13</span><span class="bar">/</span><span class="fdn">60</span></span>x = -3 </p>
+                                        <p>Verificación</p>
+                                        <p>&rArr; 13x = 180 &rArr;x=<span class="fraction"><span class="fup">180</span><span class="bar">/</span><span class="fdn">13</span></span> </p>
+                                        <p>Verificación</p>
+                                        <p><span class="fraction"><span class="fup">5</span><span class="bar">/</span><span class="fdn">6</span></span> + 0.25
+                                        <span class="fraction"><span class="fup">180</span><span class="bar">/</span><span class="fdn">13</span></span> - 0.3 <span class="fraction"><span class="fup">180</span><span class="bar">/</span><span class="fdn">13</span></span> =  <span class="fraction"><span class="fup">150</span><span class="bar">/</span><span class="fdn">13</span></span> +
+                                        <span class="fraction"><span class="fup">45</span><span class="bar">/</span><span class="fdn">13</span></span> + <span class="fraction"><span class="fup">54</span><span class="bar">/</span><span class="fdn">13</span></span> =  <span class="fraction"><span class="fup">141</span><span class="bar">/</span><span class="fdn">13</span></span></p>
+                                        <p><span class="fraction"><span class="fup">180</span><span class="bar">/</span><span class="fdn">13</span></span> - 3 = <span class="fraction"><span class="fup">141</span><span class="bar">/</span><span class="fdn">13</span></span></p>
+                                    </div> 
+                                    -->
+                                </question>
+                                <question type="simplechoice">
+                                    <description><p>15x + (x + 2) = 10 + 6x + (-x + 3)</p></description>
+                                    <ul>
+                                        <li data-response="true">x = 1</li>
+                                        <li>x = 18</li>
+                                        <li>x = -2 </li>
+                                        <li>x = 15</li>
+                                    </ul>
+                                    <!--
+                                    <button class="w_content_controler button general see_more" data-content="#textos_modal_window3">Compare la solución...</button>
+                                    <div id="textos_modal_window3" class="w_content">
+                                        <p><strong>Compare la solución y la verificación con el procedimiento realizado por usted.</strong> </p>
+                                        <p><strong>Solución: </strong></p>
+                                        <p>15x + x + 2 = 10 + 6x - x + 3 &rArr; 15x + x - 6x + x = 10 + 3 -2</p>
+                                        <p>&rArr; 11x = 11 &rArr; x = <span class="fraction"><span class="fup">11</span><span class="bar">/</span><span class="fdn">11</span></span> &rArr;  x = 1</p>
+                                         <p>Verificación</p>
+                                         <p>15(1) + (1+2) = 15 + 3 = 18</p>
+                                         <p>10 + 6(1) + (-1+3) = 10 + 6 + 2 =18</p>
+                                    </div> 
+                                    -->
+                                </question>
+                                <question type="simplechoice">
+                                    <description><p><span class="fraction"><span class="fup">2x - 3</span><span class="bar">/</span><span class="fdn">5</span></span> + <span class="fraction"><span class="fup">x + 2</span><span class="bar">/</span><span class="fdn">8</span></span> = <span class="fraction"><span class="fup">3x - 1</span><span class="bar">/</span><span class="fdn">2</span></span> - <span class="fraction"><span class="fup">5x + 4</span><span class="bar">/</span><span class="fdn">3</span></span> + <span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">10</span></span></p></description>
+                                    <ul>
+                                        <li>x = 1</li>
+                                        <li>x = 18</li>
+                                        <li data-response="true">x = - 2 </li>
+                                        <li>x = 15</li>
+                                    </ul>
+                                    <!--
+                                     <button class="w_content_controler button general see_more" data-content="#textos_modal_window4">Compare la solución...</button>
+                                    <div id="textos_modal_window4" class="w_content">
+                                        <p><strong>Compare la solución y la verificación con el procedimiento realizado por usted.</strong> </p>
+                                        <p><strong>Solución: </strong></p>
+                                        <p><span class="fraction"><span class="fup">2x - 3</span><span class="bar">/</span><span class="fdn">5</span></span> + <span class="fraction"><span class="fup">x + 2</span><span class="bar">/</span><span class="fdn">8</span></span> = <span class="fraction"><span class="fup">3x - 1</span><span class="bar">/</span><span class="fdn">2</span></span> - <span class="fraction"><span class="fup">5x + 4</span><span class="bar">/</span><span class="fdn">3</span></span> +
+                                        <span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">10</span></span>
+                                        
+                                        </p>
+                                         <p>&rArr; <span class="fraction"><span class="fup">16x - 24 + 5x + 10</span><span class="bar">/</span><span class="fdn">40</span></span> = <span class="fraction"><span class="fup">45x - 15 -50x - 40 + 3</span><span class="bar">/</span><span class="fdn">30</span></span></p>
+                                        <p>&rArr; <span class="fraction"><span class="fup">21x - 14</span><span class="bar">/</span><span class="fdn">40</span></span> =  <span class="fraction"><span class="fup">5x - 52</span><span class="bar">/</span><span class="fdn">30</span></span></p>
+                                        <p>&rArr; 630x - 420 = -200x - 2080 &rArr; 830x = -1660</p>
+                                         <p>&rArr; x = <span class="fraction"><span class="fup">-1660</span><span class="bar">/</span><span class="fdn">830</span></span> &rArr; x = -2</p>
+
+                                         <p>Verificación</p>
+                                         <p><span class="fraction"><span class="fup">2(-2) - 3</span><span class="bar">/</span><span class="fdn">5</span></span> + <span class="fraction"><span class="fup">(-2) + 2</span><span class="bar">/</span><span class="fdn">8</span></span> = -<span class="fraction"><span class="fup">7</span><span class="bar">/</span><span class="fdn">5</span></span> + 0 = - <span class="fraction"><span class="fup">7</span><span class="bar">/</span><span class="fdn">5</span></span></p>
+                                          <p><span class="fraction"><span class="fup">3(-2) - 1</span><span class="bar">/</span><span class="fdn">2</span></span> - <span class="fraction"><span class="fup">5(-2) + 4</span><span class="bar">/</span><span class="fdn">3</span></span> + <span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">10</span></span> = - <span class="fraction"><span class="fup">7</span><span class="bar">/</span><span class="fdn">2</span></span> + 2 <span class="fraction"><span class="fup">1</span><span class="bar">/</span><span class="fdn">10</span></span> = <span class="fraction"><span class="fup">7</span><span class="bar">/</span><span class="fdn">5</span></span></p>
+                                        
+                                    </div> 
+                                    -->
+                                    
+                                </question>
+                                
+                                
+                                <question type="simplechoice">
+                                    <description><p><span class="radical">&radic;</span><span class="radicand">5 - 2x </span> = <span class="radical">&radic;</span><span class="radicand">x + 1</span></p></description>
+                                    <ul>
+                                        <li data-response="true">x = 4/3</li>
+                                        <li>&#126; x = 3/4</li>
+                                        <li>x = <span class="radical">&radic;</span><span class="radicand">7/3 </span></li>
+                                        <li>x = <span class="radical">&radic;</span><span class="radicand">3/7 </span></li>
+                                    </ul>
+                                </question>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!--3.    Aplicaciones de ecuaciones lineales con una incógnita -->
+                <div class="page">
+                    <div class="subpage" id="">
+                        <h2>3.    Aplicaciones de ecuaciones lineales con una incógnita</h2>
+                        <p>En la vida cotidiana es frecuente enfrentar y hallar la solución de muchos problemas que conducen a resolver algún tipo de ecuación, como las ya estudiadas.</p>
+                        <p>Para solucionar estos problemas no se pueden establecer normas rigurosas, sin embargo, se darán una serie de recomendaciones que pueden servirle de guía; ellas son:</p>
+                        <ol>
+                           <li><p>Leer cuidadosamente el enunciado, dado en lenguaje natural, de tal manera que se comprenda lo que plantea y pregunta el problema.</p></li>
+                           <li><p>Identificar con exactitud las incógnitas, las cuales se representan, por lo general, con las últimas letras del alfabeto y las cantidades conocidas o datos que proporciona el enunciado del problema.</p></li>
+                           <li><p>Escribir el problema en lenguaje matemático, para lo cual es necesario plantear una o varias ecuaciones.</p></li>
+                           <li><p>Resolver las ecuaciones para encontrar la solución al problema. Los resultados obtenidos deben confrontarse con el contexto del problema, de tal manera que las respuestas obtenidas no entren en contradicción con el enunciado del problema.</p></li>
+                        </ol>
+                        <div class="box_connection">
+                            <p>A continuación, usted encontrará una serie de problemas resueltos, agrupados por modelos, con el fin de que usted logre comprender mejor estas sugerencias. </p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 1</h5>
+                            <p>Encontrar tres números impares consecutivos cuya suma sea igual a 57.</p>
+                            <p><strong>Solución: </strong></p>
+                            <p>Se sabe que <strong>2x</strong> siempre es un número par, siendo   un número entero, esto quiere decir que <strong>2x + 1</strong>  será impar, ya que los tres números pares e impares están en secuencia natural. Teniendo en cuenta lo anterior los tres números son.</p>
+                            <p><strong>2x + 1</strong>,  primer número impar</p>
+                            <p><strong>2x + 3</strong>, segundo número impar    </p>
+                            <p><strong>2x + 5</strong>, tercer número impar</p>
+                            <p>Ahora, la ecuación que se ajusta al enunciado del problema es <strong>(2x +1) + (2x+3) + (2x+5) = 57</strong>, resolviendo esta ecuación para <strong>x</strong>, entonces, <strong>6x + 9 = 57</strong>, lo cual implica que, <strong>6x = 48</strong> y finalmente, <strong>x = 8</strong> </p>
+                            <p>Por lo tanto, los números que cumplen esta condición son:</p>
+                            <p>Primer número impar es <strong>2(8) + 1 = 17</strong></p>
+                            <p>Segundo número impar <strong>2(8) + 3 = 19</strong></p>
+                            <p>Tercer número impar <strong>2(8) + 5= 21</strong></p>
+                            <p>El problema, como puede ver, se completa verificando que la suma de estos tres números sí es 57. </p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 2</h5>
+                            <p>La suma de las edades de A y B es 30 años. Dentro de 5 años A tendrá 3 veces la edad de B. ¿Cuántos años tiene cada uno?</p>
+                            <p><strong>Solución:</strong></p>
+                            <p>Si <strong>x</strong>, es la edad de A, entonces, <strong>30 - x</strong>años es la edad de B. Ahora, en 5 años, A tendrá <strong>x + 5</strong> años, y B tendrá <strong>30 - x + 5</strong> años; en estas condiciones se plantea la ecuación que da cuenta del enunciado del problema como:</p>
+                            <p><strong>x+5 = 3(30-x+5)</strong></p>
+                            <p><strong>x+5 = 105-3x</strong></p>
+                            <p><strong>x = 25</strong></p>
+                            <p>Este resultado indica que la edad de A es 25 años y la edad de B es 5 años.</p>
+                        </div>
+                        <div class="box_required_link">
+                            <h5>Extendiendo el Saber...</h5>
+                            <p><strong>Recurso: </strong><img src="img/img_video.png"/><a href="http://www.youtube.com/watch?v=A_4PgFHwNNY&feature=related"  target="_blank">Problemas de matemáticas</a></p>
+                            <p><strong>Duración: </strong>4:52 (cuatro minutos y cincuenta y dos segundos).</p>
+                            <p><strong>Actividad significativa: </strong>En este video encontrará otro ejemplo sobre edades. La suma de las edades de A; B y C es 78 años. Si hace 4 años B tenía el doble de la edad de A y dentro de 6 años la suma de las edades de B y C será el triple de la de A, halla la edad de C.</p>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 3</h5>
+                            <p>En un recipiente contiene 500 centímetros cúbicos de miel, con una concentración inicial de azúcar del 60%, se desea disminuir la cantidad de azúcar de la mezcla a un 40%, agregando agua pura. ¿Qué volumen de agua debe mezclarse?</p>
+                            <p>Para abordar este tipo de problemas, usted debe tener en cuenta la siguiente ecuación de balanceo:</p>
+                            <p>(Volumen inicial o peso inicial) (Concentración inicial) &#177;    (Volumen o peso que se agrega o elimina) (Concentración específica) = (volumen o peso final deseado) (concentración final requerida)</p>
+                            <p><strong>Solución: </strong></p>
+                            <p>Sea <strong>x</strong>, el volumen de agua que debe ser agregado. De acuerdo con la ecuación de balance, se tiene.</p>
+                            <p><strong>(500) <span class="fraction"><span class="fup">60</span><span class="bar">/</span><span class="fdn">100</span></span> -x  <span class="fraction"><span class="fup">100</span><span class="bar">/</span><span class="fdn">100</span></span> = (500 + x) <span class="fraction"><span class="fup">40</span><span class="bar">/</span><span class="fdn">100</span></span></strong> </p>
+                            <p>Tenga en cuenta que si se agrega agua pura, su concentración se sume del 100%. Ahora bien, el agua lo que hace es disminuir la concentración de azúcar, por eso en la fórmula se toma con signo negativo.</p>
+                            <strong><p>Por lo tanto, </p>
+                            <p>(500)(60)-x(100) = (500+x) (40)</p>
+                            <p>30000 - 100 x = 20000 + 40x</p>
+                            <p>140x = 10000</p>
+                            <p>x = 71.43 c. c. </p></strong>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 4</h5>
+                            <p>Para intentar la solución de problemas que implican el cálculo de áreas, o perímetros, de figuras planas o volúmenes de cuerpos tridimensionales, es fundamental saber a qué hacen referencia estos conceptos y la forma como se calculan. </p>
+                            <p>Las unidades del perímetro de una figura plana, son unidades de longitud; las de área o superficie son unidades de longitud elevadas al cuadrado y, las de volumen, unidades de longitud elevadas al cubo. </p>
+                            <p>Hallar la longitud del lado de un cuadrado, sabiendo que si se aumenta esta en 4 m, su área se incrementa en 64 m<sup>2</sup>.</p>
+                            <p><strong>Solución: </strong></p>
+                            <p>Sea  <strong>x</strong>, la longitud del lado del cuadrado, y esta longitud aumentada en 4 m es  <strong>x + 4</strong></p>
+                            <p>Ahora bien, como el área del cuadrado de lado <strong>x</strong>, es <strong>x&#178;</strong>, y el área del cuadrado de lado <strong>x + 4</strong>, es <strong>(x+4)&#178;</strong>, entonces, se plantea la ecuación que traduce matemáticamente la propuesta del problema, de la siguiente forma:</p>
+                            <strong><p>(x+4)&#178; = x&#178; + 64</p>
+                            <p>x&#178; + 8x + 16 = x&#178; + 64</p>
+                            <p>8x = 48</p>
+                            <p>x = 6 m</p></strong>
+                        </div>
+                        <div class="box_examples">
+                            <h5>Ejemplo 5</h5>
+                            <p>El porcentaje de una cantidad  x, es una parte de las cien en que puede dividirse esta.  Se denota por el símbolo  &#37; (Porcentaje).</p>
+                            <p>Así por ejemplo, la mitad de 1 es 0.5, es decir, el 50%; la cuarta parte es 0.25, o sea, el 25%; las tres cuartas partes de 1 constituyen el 75%; ahora bien, el 30% de 1 es 0.3; mientras que el 80% es 0.8 y el 100% es 1.</p>
+                            <p>Juan Fernández compró un automóvil y lo asegura contra hurto en una póliza de seguros que le reintegra el 83% del valor total del carro. Sabiendo que la compañía le restituye en tal contingencia  $11 500 000, ¿Cuál fue el valor de carro?</p>
+                            <p><strong>Solución: </strong></p>
+                            <p>Se llama <strong>x</strong>, al valor total del automóvil.</p>
+                            <p>Ahora bien, la ecuación que explica matemáticamente el enunciado del problema es:</p>
+                            <p><strong> x =  <span class="fraction"><span class="fup">17</span><span class="bar">/</span><span class="fdn">100</span></span>(x) = 11 500 000</strong> ¿Cómo se explica?</p>
+                            <p><strong>x - 0.17x = 11 500 000</strong></p>
+                            <p><strong>0.83x = 11 500 000</strong></p>
+                            <p> x = &#126;13 855 422</p>
+                            <p>Luego, el carro fue comprado por $13 855 422. Hay otras maneras de resolver el problema ¿Cuáles?</p>
+                            <div class="box_connection">
+                                <p>Para finalizar, le recomendamos resolver la siguiente actividad de aprendizaje.</p>
+                            </div>
+                            
+                        </div>
+                        <strong></strong>
+                    </div>
+                </div>
+                
+
+                <!--Bibliography-->
+                <div class="page">
+                    <div class="subpage" id="bibliography_page">
+                        <h2>Referencias bibliográficas</h2>
+                        <ul class="data_list">
+                            <li>Álvarez, R., & Fernández, H. (1997). <em>Matemática Básica</em>. Medellín: Polimpresos.</li>
+                            <li>Lehmann, C. (1994). <em>Geometría Analítica</em>. México D. F. Limusa.</li>
+                            <li>Leithold, L. (1994). <em>Álgebra y Trigonometría con Geometría Analítica</em>. México D. F.: Harla.</li>
+                            <li>Mejía, F. (1991). <em>Matemáticas Operativas Básicas</em>. Medellín: Colección Universidad de Medellín.</li>
+                            <li>Smith, S. (1998). <em>Trigonometría y Geometría Analítica</em>. México D. F.: Addison Wesley Longman de México, S.A.</li>
+                            <li>Spiegel, M. (2000). <em>Fórmulas y Tablas de Matemática Aplicada</em>. 2 ed. Madrid: McGRAW-HILL.</li>
+                            <li>Stewart, J. (2001). <em>Precálculo. 3 ed</em>. México D. F.: Internacional Thomson Editores, S.A.</li>
+                            <li>Sullivan, M. (1997). <em>Precálculo. 4 ed</em>. México D. F.: Prentice Hal.</li>
+                            <li>Vance, E. (1960). <em>Fundamentals of Mathematics. 3 ed</em>. Massachussets-USA: Addisson-Wesley.</li>
+                            <li>Zill, D., & Dewar, J. (1992). <em>Álgebra y Trigonometría. 2 ed</em>. México D. F.: McGRAW-HILL.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!--Créditos-->
+                <div class="page">
+                    <div class="subpage" id="credits_page">
+                        <h2>Créditos</h2>
+                        <p>El Objeto Virtual de Aprendizaje <strong>Ecuaciones Algebraicas,</strong> es propiedad de la Universidad de Medellín, el contenido, diseño gráfico y demás material didáctico, están protegidos por las leyes que rigen la propiedad intelectual.</p>
+                        <p>Para utilizar todo o parte de este material debe contar con autorización expresa.</p>
+                        <p><strong>Derechos reservados ®</strong></p>
+                        <div>
+                            <h3>Experto temático</h3>
+                            <p>Rafael Ángel Álvarez Jiménez (1<sup>a</sup> edición)</p>
+                            <p>Jorge Iván Londoño Marín (2<sup>a</sup> edición)</p>
+                        </div>
+                        <div>
+                            <h3>Corrector de estilos</h3>
+                            <p>Jhon Jairo Arango Vásquez</p>
+                        </div>
+                         <div>
+                            <h3>Gestor pedagógico virtual</h3>
+                            <p>Claudia Patricia Vásquez Lopera (1<sup>a</sup> edición)</p>
+                            <p>Sandra Isabel Arango Vásquez (1<sup>a</sup> edición)</p>
+                            <p>Luz Marina Ramírez Suárez (2<sup>a</sup> edición)</p>
+                            <p>Carolina Llanos (2<sup>a</sup> edición)</p>
+                        </div>
+                         <div>
+                            <h3>Gestor de recursos educativos digitales</h3>
+                            <p>Ana Liliana Vera Gómez</p>
+                            <p>Jennifer Ospina Ramírez</p>
+                        </div>
+                         <div>
+                            <h3>Gestor digital y multimedia</h3>
+                            <p>Santiago Hernández Restrepo</p>
+                        </div>
+                         <div>
+                            <h3>Gestor de contenidos virtuales</h3>
+                            <p>Ana Liliana Vera Gómez</p>
+                            <p>Leidy Cristina Madrigal Arrieta</p>
+                        </div>
+                        <div>
+                        <h3>Gestor de calidad virtual</h3>
+                            <p>Jennifer Ospina Ramírez</p>
+                        </div>
+                         <div>
+                            <h3>Mediador de Educación Virtual</h3>
+                            <p>Carolina Llanos Tobón</p>
+                        </div>
+                        <div>
+                            <h3>Mediador de TIC</h3>
+                            <p>María Yesenia Gallego Mejía</p>
+                        </div>
+                        <div>
+                            <h3>Líder de Educación Virtual y TIC</h3>
+                            <p>Sandra Isabel Arango Vásquez</p>
+                        </div>
+                        <div>
+                            <h3>Asesoría técnica y pedagógica</h3>
+                            <p class="logos">
+                                <img src="img/logo_udem.png" alt="UdeM" />
+                                <img src="img/logo_evirtual.png" alt="E-Virtual" />
+                            </p>
+                        </div>
+                        <div>
+                            <p class="pie">2013 (1ª versión)<br /></p>
+                            <p class="pie">2017 (2ª versión)<br /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="not_print">
+            <div id="measuring_results">
+                Avance
+                <div id="measuring_results_level"><div></div></div>
+                <div id="measuring_results_value"><span>0</span><br />%</div>
+            </div>
+            <div id="nav" class="regular_content">
+                <div class="button btn_left">
+                </div>
+                <ul class="button">
+                </ul>
+                <div class="button btn_right">
+                </div>
+            </div>
+            <div id="page_number"></div>
+        </footer>
+
+        <div class="copyright not_print"></div>
+    </div>
+
+    <div id="results_page" class="w_content" data-property-width="900" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"><ul class="data_list"></ul></div>
+    </div>
+
+    <div id="full_content" class="not_print" style="display:none;">
+        <div class="back_label">
+            <button class="backward_button button"></button>
+        </div>
+        <div id="dialog_content">
+        </div>
+    </div>
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+    <div id="close_all" class="button ion-close-circled"></div>
+</body>
+</html>
